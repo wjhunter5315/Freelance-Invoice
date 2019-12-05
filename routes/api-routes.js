@@ -1,5 +1,7 @@
 let db = require("../models");
 
+// This is to push
+
 module.exports = (app => {
     app.get("/api/user", (req, res) => {
         db.User.findAll({}).then(dbUser => {

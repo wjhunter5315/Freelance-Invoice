@@ -15,3 +15,6 @@ CREATE TABLE profile_info (
     created_at TIMESTAMP DEFAULT NOW(),
     FOREIGN KEY(userID) REFERENCES users_info(id)
 );
+
+
+-- Push in damn you

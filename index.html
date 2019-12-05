@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<button class="continue-button">Continue</button>
-
     <!-- header for the logo -->
 <section class="hero is-small is-primary is-bold">
         <div class="hero-body">
@@ -31,41 +29,61 @@
       <hr>
       <!-- basic info to create profile -->
       <div class="control">
-          <p>First Name</p>
-            <input class="input is-hovered" type="text" placeholder="Hovered input">
-          </div>
-          <br>
-          <p>Last Name</p>
-          <div class="control">
-                <input class="input is-hovered" type="text" placeholder="Hovered input">
-              </div>
-              <br>
-              <p>Username</p>
-              <div class="control">
-            <input class="input is-hovered" type="text" placeholder="Hovered input">
-          </div>
-          <br>
-          <p>Password</p>
-          <div class="field">
-                <p class="control has-icons-left">
-                  <input class="input" type="password" placeholder="Password">
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-lock"></i>
-                  </span>
-                </p>
-              </div>
-              <br>
-              <p>Confirm Password</p>
-              <div class="field">
-                    <p class="control has-icons-left">
-                      <input class="input" type="password" placeholder="Password">
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-lock"></i>
-                      </span>
-                    </p>
-                  </div>
-                  <br>
-                  <button class="button is-medium">Continue</button>
+        <p>First Name</p>
+          <input
+            id="first-name-input"
+            class="input is-hovered"
+            type="text"
+            placeholder="Hovered input">
+      </div>
+      <br>
+        <p>Last Name</p>
+        <div class="control">
+          <input
+            id="last-name-input"
+            class="input is-hovered"
+            type="text"
+            placeholder="Hovered input">
+        </div>
+        <br>
+        <p>Username</p>
+        <div class="control">
+          <input
+            id="user-name-input"
+            class="input is-hovered"
+            type="text"
+            placeholder="Hovered input">
+        </div>
+        <br>
+        <p>Password</p>
+        <div class="field">
+          <p class="control has-icons-left">
+            <input
+              id="password-input"
+              class="input"
+              type="password"
+              placeholder="Password">
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </p>
+        </div>
+        <br>
+        <p>Confirm Password</p>
+        <div class="field">
+          <p class="control has-icons-left">
+            <input
+              id="password-confirm"
+              class="input" 
+              type="password"
+              placeholder="Password">
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </p>
+        </div>
+        <br>
+        <button id="continue-button" class="button is-medium">Continue</button>
 </div>
 <script type="text/javascript" src="js/javascript.js"></script>
 </body>

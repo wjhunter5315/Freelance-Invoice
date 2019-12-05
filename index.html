@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+
+var jobSearch = "";
+var freelancerURL = "https://www.freelancer.com/api/projects/0.1/jobs/search/?job_names%5B%5D=Web";
+var stripeKey = "sk_test_4eC39HqLyjWDarjtT1zdp7dc";
+var stripeURL = "https://api.stripe.com/v1/charges/" + stripeSearch;
+var stripeSearch = "";
+
+function callAjax(url, arr) {
+  $.ajax({
+    url: url,
+    method: "GET"
+  }).then(function(response) {
+    console.log(response);
+  })
+};
+
+callAjax(freelancerURL);
+
+    
+</script>
+</body>
+</html>

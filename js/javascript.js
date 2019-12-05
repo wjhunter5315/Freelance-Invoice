@@ -19,30 +19,41 @@ function searchFl(search) {
 
 function sendInfo() {
 
-  $()
-  
-//var profile = new Profile;
-
   var profile = {
     firstname: "",
     lastname: "",
-    location: "",
+    username: "",
     password: "",
-    school: "",
-    degree: "",
-    study: "",
-    title: "",
-    company: "",
-    jobdesc: ""
+    confirm: "",
   }
 
+  profile.firstname = $("#first-name-input").val();
+  profile.lastname = $("#last-name-input").val();
+  profile.username = $("#user-name-input").val();
+  profile.password = $("#password-input").val();
+  profile.confirm = $("#password-confirm").val();
 
+  if (profile.password !== profile.confirm) {
+    alert("Password does not match.");
+    $("#first-name-input").val("");
+    $("#last-name-input").val("");
+    $("#user-name-input").val("");
+    $("#password-input").val("");
+    $("#password-confirm").val("");
+  }
+
+  else {
+    console.log(profile.firstname);
+    console.log(profile.lastname);
+    console.log(profile.username);
+    console.log(profile.password);
+    console.log(profile.confirm);
+  }
 
 };
 
-$(".continue-button").on("click", function() {
+$("#continue-button").on("click", function() {
   sendInfo();
-  console.log("Working.");
 });
 
 searchFl();

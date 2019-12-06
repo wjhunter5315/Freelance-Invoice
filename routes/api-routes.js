@@ -1,20 +1,38 @@
 let db = require("../models");
 
 module.exports = (app => {
-    app.get("/api/user", (req, res) => {\
+    app.get("/api/user", (req, res) => {
         db.User.findAll({}).then(dbUser => {
         res.json(dbUser);
         });
     });
 
-    app.get("api/Services", (req, res) => {
+    app.get("/api/userEDU", (req, res) => {
+        db.UserEDU.findAll({}).then(dbuserEDU => {
+            res.json(dbuserEDU);
+        });
+    });
+
+    app.get("/api/userExp", (req, res) => {
+        db.UserEpx.findAll({}).then(dbuserExp => {
+            res.json(dbuserExp);
+        });
+    });
+
+    app.get("/api/services", (req, res) => {
         db.Services.findAll({}).then(dbServices => {
             res.json(dbServices);
         });
     });
+    
+    app.get("/api/invoices", (req, res) => {
+        db.Invoices.findAll({}).then(dbInvoices => {
+            res.json(dbInvoices);
+        });
+    });
 
-        app.post("/api/user", (req, res) => {
-            db.User.create({
+    app.post("/api/user", (req, res) => {
+        db.User.create({
             firstName: req.body.name,
             lastName: req.body.lastName,
             city: req.body.city,
@@ -24,7 +42,7 @@ module.exports = (app => {
             username: req.body.userName,
             password: req.body.password
         }).then(dbUser => {
-            res.json(dbUser);
+            res.json(dbUser);
         });
     });
 
@@ -46,7 +64,7 @@ module.exports = (app => {
     });
 
     app.post("/api/education", (req, res) => {
-        db.userEDU.create({
+        db.UserEDU.create({
             level: req.body.level,
             school: req.body.school,
             degree: req.body.degree,
@@ -57,7 +75,7 @@ module.exports = (app => {
     });
 
     app.post("/api/experience", (req, res) => {
-        db.userExp.create({
+        db.UserExp.create({
             prevJob: req.body.prevJob,
             title: req.body.title,
             description: req.body.description
@@ -74,5 +92,45 @@ module.exports = (app => {
         }).then(dbUser => {
             res.json(dbUser);
         });
+    });
+
+    app.delete("/api/userEDU/:id", (req, res) => {
+        db.UserEDU.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(dbuserEDU => {
+            res.json(dbuserEDU);
+        });
+    });
+
+    app.delete("/api/userExp/:id", (req, res) => {
+        db.UserEpx.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(dbuserExp => {
+            res.json(dbuserExp);
+        });
+    });
+
+    app.delete("/api/servives/:id", (req, res) => {
+        db.Services.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(dbServices => {
+            res.json(dbServices);
+        });
+    });
+
+    app.delete("/api/invoices/:id", (req, res) => {
+        db.Invoices.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(dbInvoices => {
+            res.json(dbInvoices);
+        });
     });
 });

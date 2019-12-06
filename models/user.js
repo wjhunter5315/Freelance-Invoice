@@ -19,6 +19,8 @@ const User = sequelize.define("user", {
     state: Sequelize.STRING,
     userEmail: Sequelize.STRING,
     userPhone: Sequelize.INTEGER,
+    username: Sequelize.STRING,
+    password: Sequelize.STRING,
 });
 
 User.sync();

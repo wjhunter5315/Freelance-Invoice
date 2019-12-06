@@ -1,3 +1,5 @@
+
+
 var flURL = "https://www.freelancer.com/api/projects/0.1/jobs/search/?job_names%5B%5D=";
 //const stripeKey = "sk_test_4eC39HqLyjWDarjtT1zdp7dc";
 //const stripeSearch = "";
@@ -17,16 +19,16 @@ function searchFl(search) {
   callAjax(flURL);
 };
 
+const users = [];
+var profile = {
+  firstname: "",
+  lastname: "",
+  username: "",
+  password: "",
+  confirm: "",
+}
+
 function sendInfo() {
-
-  var profile = {
-    firstname: "",
-    lastname: "",
-    username: "",
-    password: "",
-    confirm: "",
-  }
-
   profile.firstname = $("#first-name-input").val();
   profile.lastname = $("#last-name-input").val();
   profile.username = $("#user-name-input").val();
@@ -35,25 +37,22 @@ function sendInfo() {
 
   if (profile.password !== profile.confirm) {
     alert("Password does not match.");
-    $("#first-name-input").val("");
-    $("#last-name-input").val("");
-    $("#user-name-input").val("");
     $("#password-input").val("");
     $("#password-confirm").val("");
   }
-
   else {
-    console.log(profile.firstname);
-    console.log(profile.lastname);
-    console.log(profile.username);
-    console.log(profile.password);
-    console.log(profile.confirm);
+    users.push(profile);
+    console.log(users);
+    return profile;
   }
-
 };
 
 $("#continue-button").on("click", function() {
   sendInfo();
 });
 
+
+
 searchFl();
+
+module.exports = users;

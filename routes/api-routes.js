@@ -1,4 +1,4 @@
-let db = require("../models");
+const db = require("../models");
 
 module.exports = (app => {
     app.get("/api/user", (req, res) => {
@@ -57,7 +57,7 @@ module.exports = (app => {
 
     app.post("/api/invoices", (req, res) => {
         db.Invoices.create({
-            client: req.body.client;
+            client: req.body.client
         }).then(dbInvoices => {
             res.json(dbInvoices);
         });

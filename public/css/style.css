@@ -30,3 +30,13 @@ h2 {
     color: white;
     border: hidden;
 }
+
+#upload-button {
+    width: 100%;
+    background-color: forestgreen;
+    color: white;
+}
+
+.line-through {
+    text-decoration: line-through;
+}

@@ -40,3 +40,34 @@ h2 {
 .line-through {
     text-decoration: line-through;
 }
+
+.card {
+    float: right;
+    width: 50%;
+    margin: 1%;
+}
+
+.left {
+    float: left;
+}
+
+hr {
+    clear: both;
+}
+
+#job-title {
+    margin-bottom: 30px;
+}
+
+.button-container {
+    margin: 0 auto;
+    width: 60%;
+}
+.is-large {
+    float: right;
+    width: 25%;
+}
+
+.fab {
+    width: 100px !important;
+}

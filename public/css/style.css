@@ -37,12 +37,18 @@ h2 {
     color: white;
 }
 
-.line-through {
-    text-decoration: line-through;
+.profile-container {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#about-me, #about-header {
+    width: 30%;
 }
 
 .card {
-    float: right;
+    float: right !important;
     width: 50%;
     margin: 1%;
 }
@@ -56,18 +62,39 @@ hr {
 }
 
 #job-title {
+    width: 125px;
     margin-bottom: 30px;
+    background-color: yellowgreen;
+    padding: 5px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
 }
 
 .button-container {
     margin: 0 auto;
-    width: 60%;
+    width: 80%;
+    /* position: fixed; */
 }
 .is-large {
     float: right;
-    width: 25%;
+    width: 200px;
+    margin-left: 20px;
+    border: hidden;
 }
 
-.fab {
-    width: 100px !important;
+.fa-3x {
+    display: block;
+    margin: 10px;
+    float: right;
+}
+
+#about-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.invoice-container {
+    margin: 20px auto;
+    width: 90%;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Profile</title>
+    <title>Invoices</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
@@ -71,79 +71,36 @@
       </div>
     </nav>
 
-    <!-- container holding all info elements -->
-    <div class="profile-container">
-      <!-- image with name under -->
-      <div class="left">
-        <img
-          src="https://via.placeholder.com/300x400.png"
-          style="border-radius: 3px;"
-          alt=""
-        />
-        <br /><br />
-        <h1 style="font-size: 36px;">First Name, Last Name</h1>
-        <h5 id="job-title">Job Title</h5>
-        
-    </div>
-
-      <!-- experience card -->
-      <div class="card">
-        <div class="card-content">
-          <p class="title">
-            Experience
-          </p>
-          <hr />
-          <p class="subtitle">
-            Company
-          </p>
-          <p class="subtitle">
-            Title
-          </p>
-          <p class="subtitle">
-            Description
-          </p>
-        </div>
-      </div>
-
-      <!-- education card -->
-      <div class="card">
-        <div class="card-content">
-          <p class="title">
-            Education
-          </p>
-          <hr />
-          <p class="subtitle">
-            School
-          </p>
-          <p class="subtitle">
-            Field of study
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- about me -->
-    <div id="about-container">
-      <h1 style="font-size: 24px;" id="about-header">About Me</h1>
-      <p id="about-me">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam sequi
-        est, rem illo quaerat fugiat nesciunt quo, ducimus voluptates numquam
-        modi laudantium placeat. Nesciunt maiores, eaque mollitia,
-        consequuntur, alias veniam quis fugiat sapiente repudiandae officiis
-        harum repellendus aliquid iure adipisci.
-      </p>
-    </div>
-    <hr>
-    <div class="button-container">
-      <button
-        class="button is-large"
-        style="background-color: forestgreen; color: white;"
-      >
-        Contact Me
-      </button>
-
-      <i class="fab fa-facebook-square fa-3x"></i
-      ><i class="fab fa-instagram fa-3x"></i
-      ><i class="fab fa-github-alt fa-3x"></i>
+    <div class="invoice-container">
+      <h1 style="font-size: 36px;">Invoices</h1>
+      <hr />
+      <div class="columns">
+            <div class="column" style="font-weight: 700;">
+              Description
+              
+              <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
+                  Your item name
+              </p>
+            </div>
+            <div class="column" style="font-weight: 700;">
+              Rate
+              <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
+                    Your rate
+                </p>
+            </div>
+            <div class="column" style="font-weight: 700;">
+              Qty
+              <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
+                    1
+                </p>
+            </div>
+            <div class="column" style="font-weight: 700;">
+              Line Total
+              <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
+                    line item total
+                </p>
+            </div>
+          </div>
     </div>
 
     <script type="text/javascript" src="public/js/javascript.js"></script>

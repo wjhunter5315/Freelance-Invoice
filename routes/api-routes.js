@@ -45,13 +45,13 @@ module.exports = (app => {
     //Create a new user
     app.post("/api/user", (req, res) => {
         db.User.create({
-            firstName: req.body.name,
+            firstName: req.body.firstName,
             lastName: req.body.lastName,
             city: req.body.city,
             state: req.body.state,
-            userEmail: req.body.email,
-            userPhone: req.body.email,
-            username: req.body.userName,
+            userEmail: req.body.userEmail,
+            userPhone: req.body.userPhone,
+            username: req.body.username,
             password: req.body.password
         }).then(dbUser => {
             res.json(dbUser);
@@ -95,15 +95,88 @@ module.exports = (app => {
             res.json(dbuserExp);
         });
     });
+    // Update a User's info by the id
+    app.put("/api/user", (req, res) => {
+        db.User.update({
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            city: req.body.city,
+            state: req.body.state,
+            userEmail: req.body.userEmail,
+            userPhone: req.body.userPhone,
+            username: req.body.username,
+            password: req.body.password
+        }, {
+            where: {
+                id: req.body.id
+            }
+        }).then(dbUser => {
+            res.json(dbUser);
+        });
+    });
+    //Update the User's Education by the id
+    app.put("/api/education", (req, res) => {
+        db.UserEDU.update({
+            level: req.body.level,
+            school: req.body.school,
+            degree: req.body.degree,
+            field: req.body.field
+        }, {
+            where: {
+                id: req.body.id
+            }
+        }).then(dbuserEDU => {
+            res.json(dbuserEDU);
+        });
+    });
+    //Update a User's work Experience by the id
+    app.put("/api/experience", (req, res) => {
+        db.UserEpx.update({
+            prevJob: req.body.prevJob,
+            title: req.body.title,
+            description: req.body.description
+        }, {
+            where: {
+                id: req.body.id
+            }
+        }).then(dbuserExp => {
+            res.json(dbuserExp);
+        });
+    });
+    //Udpate a User's Services by id
+    app.put("/api/services", (req, res) => {
+        db.Services.update({
+            labor: req.body.labor,
+            rate: req.body.rate
+        }, {
+            where: {
+                id: req.body.id
+            }
+        }).then(dbServices => {
+            res.json(dbServices);
+        });
+    });
+    //Update an Invoice for a User's services by id
+    app.put("/api/invoices", (req, res) => {
+        db.Invoices.update({
+            client: req.body.client
+        }, {
+            where: {
+                id: req.body.id
+            }
+        }).then(dbInvoices => {
+            res.json(dbInvoices);
+        });
+    });
     //Delete a user by the id
     app.delete("/api/user/:id", (req, res) => {
-        db.User.destroy({
-            where: {
-                id: req.params.id
-            }
-        }).then(dbUser => {
-            res.json(dbUser);
-        });
+        db.User.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(dbUser => {
+            res.json(dbUser);
+        });
     });
     //Delete education from a user by id
     app.delete("/api/userEDU/:id", (req, res) => {

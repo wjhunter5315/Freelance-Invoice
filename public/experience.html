@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FEELANCER APP</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- progression bar -->
+    <progress class="progress is-link" value="66" max="100">66%</progress>
+
+    <!-- container holding all info elements -->
+    <div class="big-container">
+        
+        <b class="header">Experience</b>
+        <br />
+        <h2>Enter your most recent work experience</h2>
+        <br>
+        <!-- upload button -->
+        <button id="upload-button" class="button is-medium">Upload Resume</button>
+        <br><br>
+        <img src="./public/assets/img/or.jpg" width="100%" alt="">
+       
+
+      <!-- job title section -->
+      <div class="control">
+        <p>Title</p>
+        <input
+          id="title-input"
+          class="input is-hovered"
+          type="text"
+          placeholder=""
+        />
+      </div>
+
+      <br />
+
+      <!-- company section -->
+      <p>Company</p>
+      <div class="control">
+        <input
+          id="company-input"
+          class="input is-hovered"
+          type="text"
+          placeholder=""
+        />
+      </div>
+
+      <br />
+
+      <!-- job description section -->
+      <p>Job Description</p>
+      <div class="control">
+        <input
+          id="job-description-input"
+          class="input is-hovered"
+          type="text"
+          placeholder=""
+        />
+      </div>
+
+      <br />
+
+      <!-- button to continue -->
+      <button id="continue-button" class="button is-medium">Continue</button>
+    </div>
+    <script type="text/javascript" src="./js/javascript.js"></script>
+  </body>
+</html>

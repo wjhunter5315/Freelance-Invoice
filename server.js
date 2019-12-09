@@ -1,27 +1,23 @@
 var express = require("express");
-var exphbs = require("express-handlebars");
-var profiles = require("./js/javascript.js")
 
 var app = express();
+var PORT = process.env.PORT || 8000;
 
-var PORT = process.env.PORT || 8080;
+var db = require("./models");
 
-//initiating handlebars
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
-
-//initiating express
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-//to grab static files
+
+// Static directory to be served
 app.use(express.static("public"));
 
-app.get("/profile", function(req, res) {
-    res.render("profile", profiles.users[0])
-})
+// api & html routes
+require("./routes/api-routes.js")(app);
+require("./routes/html-routes.js")(app);
 
-//syncing databases & confirming connection to PORT
-
-app.listen(PORT, function() {
+// server listening
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
+  });
 });

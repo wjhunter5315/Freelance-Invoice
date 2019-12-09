@@ -76,8 +76,8 @@ module.exports = (app => {
 
     app.post("/api/experience", (req, res) => {
         db.UserExp.create({
-            prevJob: req.body.prevJob,
             title: req.body.title,
+            company: req.body.company,
             description: req.body.description
         }).then(dbuserExp => {
             res.json(dbuserExp);
@@ -120,8 +120,8 @@ module.exports = (app => {
 
     app.put("/api/experience", (req, res) => {
         db.UserExp.update({
-            prevJob: req.body.prevJob,
             title: req.body.title,
+            company: req.body.company,
             description: req.body.description
         }, {
             where: {

@@ -1,13 +1,10 @@
-const Sequelize = require("sequelize");
-const sequelize = require("./index.js");
+module.exports = function(sequelize, DataTypes) {
 
-const UserEDU = sequelize.define("userEDU", {
-    level: Sequelize.STRING,
-    school: Sequelize.STRING,
-    degree: Sequelize.STRING,
-    field: Sequelize.STRING,
-});
-
-UserEDU.sync();
-
-module.exports = UserEDU;
+    const UserEDU = sequelize.define("userEDU", {
+        level: DataTypes.STRING,
+        school: DataTypes.STRING,
+        degree: DataTypes.STRING,
+        field: DataTypes.STRING,
+    });
+    return UserEDU;
+    };

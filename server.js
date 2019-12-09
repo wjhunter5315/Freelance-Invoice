@@ -1,24 +1,23 @@
-let express = require("express");
+var express = require("express");
 
-let PORT = process.env.PORT || 8000;
-let app = express();
+var app = express();
+var PORT = process.env.PORT || 8000;
 
-// Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static("public"));
+var db = require("./models");
 
-// Parse application body
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-let exphbs = require("express-handlebars");
+// Static directory to be served
+app.use(express.static("public"));
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// api & html routes
+require("./routes/api-routes.js")(app);
+require("./routes/html-routes.js")(app);
 
-let routes = require("");
-
-app.use(routes);
-
-app.listen(PORT, function() {
-  console.log("Listening on port:%s", PORT);
+// server listening
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });

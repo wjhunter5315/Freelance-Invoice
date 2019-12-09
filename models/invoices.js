@@ -1,10 +1,6 @@
-const Sequelize = require("sequelize");
-const sequelize = require("./index.js");
-
-const Invoices = sequelize.define("invoices", {
-    client: Sequelize.STRING,
-});
-
-Invoices.sync();
-
-module.exports = Invoices;
+module.exports = function(sequelize, DataTypes) {
+    const Invoices = sequelize.define("Invoices", {
+        client: DataTypes.STRING,
+    });
+return Invoices;
+};

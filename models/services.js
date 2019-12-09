@@ -1,11 +1,9 @@
-const Sequelize = require("sequelize");
-const sequelize = require("./index.js");
+module.exports = function(sequelize, DataTypes) {
 
-const Services = sequelize.define("services", {
-    labor: Sequelize.STRING,
-    rate: Sequelize.INTEGER,
-});
-
-Services.sync();
-
-module.exports = Services;
+    let Services = sequelize.define("Services", {
+        labor: DataTypes.STRING,
+        rate: DataTypes.INTEGER
+    });
+    return Services;
+    };
+    

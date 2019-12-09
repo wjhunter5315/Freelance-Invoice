@@ -1,12 +1,8 @@
-const Sequelize = require("sequelize");
-const sequelize = require("./index.js");
-
-const UserExp = sequelize.define("userExp", {
-    prevJobs: Sequelize.STRING,
-    title: Sequelize.STRING,
-    description: Sequelize.STRING,
+module.exports = function(sequelize, DataTypes) {
+    const UserExp = sequelize.define("userExp", {
+        prevJobs: DataTypes.STRING,
+        title: DataTypes.STRING,
+        description: DataTypes.STRING,
 });
-
-UserExp.sync();
-
-module.exports = UserExp;
+return UserExp;
+};

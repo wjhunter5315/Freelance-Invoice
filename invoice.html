@@ -14,14 +14,14 @@
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
   </head>
   <body>
     <!-- navbar -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand is-transparent">
         <img
-          src="./assets/img/logo.png"
+          src="./public/assets/img/logo.png"
           width="50"
           style="margin: 10px 40px;"
         />
@@ -55,17 +55,7 @@
 
         <div class="navbar-end">
           <div class="navbar-item">
-            <div class="buttons">
-              <a
-                class="button is-primary"
-                style="background-color: forestgreen;"
-              >
-                <strong>Sign up</strong>
-              </a>
-              <a class="button is-light">
-                Log in
-              </a>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -85,13 +75,17 @@
             <div class="column" style="font-weight: 700;">
               Rate
               <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
-                    Your rate
+                  Your Rate
                 </p>
             </div>
             <div class="column" style="font-weight: 700;">
-              Qty
+              Qty / Hours
               <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
-                    1
+                  <div class="field">
+                      <div class="control">
+                        <input class="input is-info" type="text" placeholder="0" style="width: 60px;">
+                      </div>
+                    </div>
                 </p>
             </div>
             <div class="column" style="font-weight: 700;">
@@ -101,8 +95,22 @@
                 </p>
             </div>
           </div>
+          <hr>
+          <div id="subtotal">
+            Subtotal
+            <br>
+            <br>
+            Taxes
+          </div>
+          <br>
+          Amount Due
+          <br>
+          <hr style="width: 150px;">
+          <p class="title" id="amount-due" >$1000</p>
+          <button class="button is-large make-payment" style="background-color: forestgreen; color: white;">Make Payment</button>
     </div>
 
-    <script type="text/javascript" src="js/javascript.js"></script>
+
+    <script type="text/javascript" src="public/js/javascript.js"></script>
   </body>
 </html>

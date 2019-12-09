@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Invoices</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand is-transparent">
+        <img
+          src="./public/assets/img/logo.png"
+          width="50"
+          style="margin: 10px 40px;"
+        />
+
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Home
+          </a>
+
+          <a class="navbar-item">
+            Profile
+          </a>
+          <a class="navbar-item">
+            Invoices
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a
+                class="button is-primary"
+                style="background-color: forestgreen;"
+              >
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="invoice-container">
+      <h1 style="font-size: 36px;">Invoices</h1>
+      <hr />
+      <div class="columns">
+            <div class="column" style="font-weight: 700;">
+              Description
+              
+              <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
+                  Your item name
+              </p>
+            </div>
+            <div class="column" style="font-weight: 700;">
+              Rate
+              <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
+                    Your rate
+                </p>
+            </div>
+            <div class="column" style="font-weight: 700;">
+              Qty
+              <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
+                    1
+                </p>
+            </div>
+            <div class="column" style="font-weight: 700;">
+              Line Total
+              <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
+                    line item total
+                </p>
+            </div>
+          </div>
+    </div>
+
+    <script type="text/javascript" src="public/js/javascript.js"></script>
+  </body>
+</html>

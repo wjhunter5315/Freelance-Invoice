@@ -5,5 +5,13 @@ module.exports = function(sequelize, DataTypes) {
         degree: DataTypes.STRING,
         field: DataTypes.STRING,
     });
+
+    UserEDU.associate = (models) => {
+        UserEDU.belongsTo(models.User, {
+            foreihnKey: {
+                allowNull: false
+            }
+        });
+    };
     return UserEDU;
     };

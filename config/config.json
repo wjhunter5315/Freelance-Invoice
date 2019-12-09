@@ -1,7 +1,11 @@
 {
     "development": {
       "username": "root",
+<<<<<<< HEAD
       "password": null,
+=======
+      "password": "Blackhouse12!",
+>>>>>>> df861a309c0d44c4bc04dd74e5d87e5e3b3c79d4
       "database": "freelance_db",
       "host": "127.0.0.1",
       "port": 3306,

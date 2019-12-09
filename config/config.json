@@ -1,7 +1,7 @@
 {
     "development": {
       "username": "root",
-      "password": "Coding101",
+      "password": null,
       "database": "freelance_db",
       "host": "127.0.0.1",
       "port": 3306,

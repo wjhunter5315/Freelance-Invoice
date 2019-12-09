@@ -1,3 +1,7 @@
+$("#upload-button").on("click", function() {
+    console.log("Button is working.");
+});
+
 $("#continue-button").on("click", function() {
 
     var user = {

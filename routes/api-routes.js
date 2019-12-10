@@ -14,7 +14,7 @@ module.exports = (app => {
     });
 
     app.get("/api/userExp", (req, res) => {
-        db.UserEpx.findAll({}).then(dbuserExp => {
+        db.userExp.findAll({}).then(dbuserExp => {
             res.json(dbuserExp);
         });
     });
@@ -33,13 +33,13 @@ module.exports = (app => {
 
     app.post("/api/user", (req, res) => {
         db.User.create({
-            firstName: req.body.name,
+            firstName: req.body.firstName,
             lastName: req.body.lastName,
             city: req.body.city,
             state: req.body.state,
-            userEmail: req.body.email,
-            userPhone: req.body.email,
-            username: req.body.userName,
+            userEmail: req.body.userEmail,
+            userPhone: req.body.hone,
+            username: req.body.username,
             password: req.body.password
         }).then(dbUser => {
             res.json(dbUser);
@@ -63,9 +63,8 @@ module.exports = (app => {
         });
     });
 
-    app.post("/api/education", (req, res) => {
-        db.UserEDU.create({
-            level: req.body.level,
+    app.post("/api/userEdu", (req, res) => {
+        db.userEdu.create({
             school: req.body.school,
             degree: req.body.degree,
             field: req.body.field
@@ -74,8 +73,8 @@ module.exports = (app => {
         });
     });
 
-    app.post("/api/experience", (req, res) => {
-        db.UserExp.create({
+    app.post("/api/userExp", (req, res) => {
+        db.userExp.create({
             title: req.body.title,
             company: req.body.company,
             description: req.body.description
@@ -119,7 +118,7 @@ module.exports = (app => {
     });
 
     app.put("/api/experience", (req, res) => {
-        db.UserExp.update({
+        db.userExp.update({
             title: req.body.title,
             company: req.body.company,
             description: req.body.description
@@ -178,7 +177,7 @@ module.exports = (app => {
     });
 
     app.delete("/api/userExp/:id", (req, res) => {
-        db.UserEpx.destroy({
+        db.userExp.destroy({
             where: {
                 id: req.params.id
             }

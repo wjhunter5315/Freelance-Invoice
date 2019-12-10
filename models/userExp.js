@@ -1,8 +1,17 @@
 module.exports = function(sequelize, DataTypes) {
-    const UserExp = sequelize.define("userExp", {
+    let UserExp = sequelize.define("userExp", {
         title: DataTypes.STRING,
         company: DataTypes.STRING,
         description: DataTypes.STRING
 });
+
+UserExp.associate = function(models) {
+    UserExp.belongsTo(models.User, {
+        foreignKey: {
+            allowNull: false,
+        }
+    }
+    )};
+
 return UserExp;
 };

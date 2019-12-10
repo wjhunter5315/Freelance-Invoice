@@ -1,4 +1,5 @@
 var path = require("path");
+const db = require("../models");
 
 module.exports = function(app) {
 
@@ -6,16 +7,23 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../index.html"));
   });
 
-  // add route loads the add.html page,
-  // where users can enter new characters to the db
   app.get("/education", function(req, res) {
     res.sendFile(path.join(__dirname, "../education.html"));
   });
 
-  // all route loads the all.html page,
-  // where all characters in the db are displayed
   app.get("/experience", function(req, res) {
     res.sendFile(path.join(__dirname, "../experience.html"));
   });
 
+  app.get("/profile", function(req, res) {
+    res.sendFile(path.join(__dirname, "../profile.html"));
+  });
+  // app.get("/profile/:id", function(req, res) {
+  //   db.query.findAll({
+  //     where: req.params.id
+  //   }).then(function(result) {
+  //     console.log(result);
+  //   })
+  //   res.render("index", data)
+  // })
 };

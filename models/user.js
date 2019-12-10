@@ -6,10 +6,16 @@ module.exports = function(sequelize, DataTypes) {
         city: DataTypes.STRING,
         state: DataTypes.STRING,
         userEmail: DataTypes.STRING,
-        userPhone: DataTypes.INTEGER,
+        userPhone: DataTypes.STRING,
         username: DataTypes.STRING,
         password: DataTypes.STRING
     });
+
+    // User.associate = function(models) {
+    //     User.hasMany(models.UserEdu, models.UserExp, models.Invoices, {
+    //         onDelete: "cascade",
+    //     });
+    // };
     return User;
     };
     

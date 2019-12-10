@@ -1,9 +1,17 @@
 module.exports = function(sequelize, DataTypes) {
-
-    const UserEDU = sequelize.define("userEDU", {
+    let UserEdu = sequelize.define("userEdu", {
         school: DataTypes.STRING,
         degree: DataTypes.STRING,
         field: DataTypes.STRING,
-    });
-    return UserEDU;
-    };
+});
+
+// UserEdu.associate = function(models) {
+//     UserEdu.belongsTo(models.User, {
+//         foreignKey: {
+//             allowNull: false,
+//         }
+//     }
+//     )};
+
+return UserEdu;
+};

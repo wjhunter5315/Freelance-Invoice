@@ -1,17 +1,17 @@
 $("#continue-button").on("click", function() {
 
-    var user = {
-        school: "",
-        degree: "",
-        field: ""
-    }
-    
-    user.school = $("#school-input").val();
-    user.degree = $("#degree-input").val();
-    user.field = $("#field-input").val();
+var userEdu = {
+    school: $("#school-input").val(),
+    degree: $("#degree-input").val(),
+    field: $("#field-input").val()
+};
   
-    console.log(user.school);
-    console.log(user.degree);
-    console.log(user.field);
-    
+$.ajax({
+    method: "POST",
+    url: "/api/userEdu",
+    data: userEdu
+  }).catch((err) => {
+    if (err) throw err;
+  })
+
 });

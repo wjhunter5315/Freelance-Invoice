@@ -10,8 +10,6 @@ Services.associate = function(models) {
         foreignKey: {
             allowNull: false,
         },
-        targetKey: 'userid',
-        foreignKey: 'userid',
     }
     )};
 

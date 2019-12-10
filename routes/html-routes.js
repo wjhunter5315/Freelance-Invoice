@@ -15,12 +15,12 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../experience.html"));
   });
 
-  app.get("/profile/:id", function(req, res) {
-    db.query.findAll({
-      where: req.params.id
-    }).then(function(result) {
-      console.log(result);
-    })
-    res.render("index", data)
-  })
+  // app.get("/profile/:id", function(req, res) {
+  //   db.query.findAll({
+  //     where: req.params.id
+  //   }).then(function(result) {
+  //     console.log(result);
+  //   })
+  //   res.render("index", data)
+  // })
 };

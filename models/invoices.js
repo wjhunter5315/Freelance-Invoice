@@ -9,12 +9,13 @@ Invoices.associate = function(models) {
             allowNull: false,
         }
     },
-        Invoices.hasOne(models.Services, {
+    Invoices.hasOne(models.Services, {
         foreignKey: {
             allowNull: false,
         }
     })
 )};
+
 return Invoices;
 };
 

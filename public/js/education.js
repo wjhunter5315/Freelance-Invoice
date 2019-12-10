@@ -1,6 +1,6 @@
 $("#continue-button").on("click", function() {
 
-var userEdu = {
+var UserEdu = {
     school: $("#school-input").val(),
     degree: $("#degree-input").val(),
     field: $("#field-input").val()
@@ -8,8 +8,8 @@ var userEdu = {
   
 $.ajax({
     method: "POST",
-    url: "/api/userEdu",
-    data: userEdu
+    url: "/api/UserEdu",
+    data: UserEdu
   }).catch((err) => {
     if (err) throw err;
   })

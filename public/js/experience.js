@@ -3,7 +3,7 @@ $("#upload-button").on("click", function() {
 });
 
 $("#continue-button").on("click", function() {
-  var userExp = {
+  var UserExp = {
       title: $("#title-input").val(),
       company: $("#company-input").val(),
       description: $("#job-description-input").val()
@@ -11,8 +11,8 @@ $("#continue-button").on("click", function() {
 
   $.ajax({
     method: "POST",
-    url: "/api/userExp",
-    data: userExp
+    url: "/api/UserExp",
+    data: UserExp
   }).catch((err) => {
     if (err) throw err;
   })

@@ -1,20 +1,20 @@
 const db = require("../models");
 
 module.exports = (app => {
-    app.get("/api/user", (req, res) => {
+    app.get("/api/User", (req, res) => {
         db.User.findAll({}).then(dbUser => {
         res.json(dbUser);
         });
     });
 
-    app.get("/api/userEDU", (req, res) => {
-        db.UserEDU.findAll({}).then(dbuserEDU => {
+    app.get("/api/UserEDU", (req, res) => {
+        db.UserEdu.findAll({}).then(dbuserEDU => {
             res.json(dbuserEDU);
         });
     });
 
-    app.get("/api/userExp", (req, res) => {
-        db.userExp.findAll({}).then(dbuserExp => {
+    app.get("/api/UserExp", (req, res) => {
+        db.UserExp.findAll({}).then(dbuserExp => {
             res.json(dbuserExp);
         });
     });
@@ -31,7 +31,7 @@ module.exports = (app => {
         });
     });
 
-    app.post("/api/user", (req, res) => {
+    app.post("/api/User", (req, res) => {
         db.User.create({
             firstName: req.body.firstName,
             lastName: req.body.lastName,
@@ -63,8 +63,8 @@ module.exports = (app => {
         });
     });
 
-    app.post("/api/userEdu", (req, res) => {
-        db.userEdu.create({
+    app.post("/api/UserEdu", (req, res) => {
+        db.UserEdu.create({
             school: req.body.school,
             degree: req.body.degree,
             field: req.body.field
@@ -73,8 +73,8 @@ module.exports = (app => {
         });
     });
 
-    app.post("/api/userExp", (req, res) => {
-        db.userExp.create({
+    app.post("/api/UserExp", (req, res) => {
+        db.UserExp.create({
             title: req.body.title,
             company: req.body.company,
             description: req.body.description
@@ -83,7 +83,7 @@ module.exports = (app => {
         });
     });
 
-    app.put("/api/user", (req, res) => {
+    app.put("/api/User", (req, res) => {
         db.User.update({
             firstName: req.body.name,
             lastName: req.body.lastName,

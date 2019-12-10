@@ -15,6 +15,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../experience.html"));
   });
 
+  app.get("/profile", function(req, res) {
+    res.sendFile(path.join(__dirname, "../profile.html"));
+  });
   // app.get("/profile/:id", function(req, res) {
   //   db.query.findAll({
   //     where: req.params.id

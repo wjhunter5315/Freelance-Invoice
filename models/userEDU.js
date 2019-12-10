@@ -5,13 +5,13 @@ module.exports = function(sequelize, DataTypes) {
         field: DataTypes.STRING,
 });
 
-UserEdu.associate = function(models) {
-    UserEdu.belongsTo(models.User, {
-        foreignKey: {
-            allowNull: false,
-        }
-    }
-    )};
+// UserEdu.associate = function(models) {
+//     UserEdu.belongsTo(models.User, {
+//         foreignKey: {
+//             allowNull: false,
+//         }
+//     }
+//     )};
 
 return UserEdu;
 };

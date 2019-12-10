@@ -11,14 +11,11 @@ module.exports = function(sequelize, DataTypes) {
         password: DataTypes.STRING
     });
 
-    User.associate = function(models) {
-        User.hasMany(models.UserEdu, models.UserExp, models.Invoices, {
-            onDelete: "cascade",
-            as: 'admin',
-            foreignKey: 'userid',
-            sourceKey: 'userid'
-        });
-    };
+    // User.associate = function(models) {
+    //     User.hasMany(models.UserEdu, models.UserExp, models.Invoices, {
+    //         onDelete: "cascade",
+    //     });
+    // };
     return User;
     };
     

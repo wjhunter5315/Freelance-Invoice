@@ -3,18 +3,18 @@ module.exports = function(sequelize, DataTypes) {
         client: DataTypes.STRING,
     });
 
-Invoices.associate = function(models) {
-    Invoices.belongsTo(models.User, {
-        foreignKey: {
-            allowNull: false,
-        }
-    },
-    Invoices.hasOne(models.Services, {
-        foreignKey: {
-            allowNull: false,
-        }
-    })
-)};
+// Invoices.associate = function(models) {
+//     Invoices.belongsTo(models.User, {
+//         foreignKey: {
+//             allowNull: false,
+//         }
+//     },
+//     Invoices.hasOne(models.Services, {
+//         foreignKey: {
+//             allowNull: false,
+//         }
+//     })
+// )};
 
 return Invoices;
 };

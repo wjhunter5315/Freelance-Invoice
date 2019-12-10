@@ -31,7 +31,6 @@ event.preventDefault();
   }
 });
 
-<<<<<<< HEAD
 //education button
 
 $("#continue-button").on("click", function(event) {
@@ -75,11 +74,3 @@ $("#continue-button").on("click", function() {
     if (err) throw err;
   })
   });
-=======
-$("#getStarted").on("click", function() {
-  goSignup();
-});
-function goSignup() {
-    window.location.href = "../../create-profile"
-}
->>>>>>> 263a95720464e06f40d7ef7a4e0127b27a016a7e

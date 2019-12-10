@@ -3,6 +3,16 @@ module.exports = function(sequelize, DataTypes) {
         title: DataTypes.STRING,
         company: DataTypes.STRING,
         description: DataTypes.STRING
-});
-return UserExp;
+    });
+    //User Experience is associated with ("Belongs To") User
+    // will add userId to UserEpx to hold the primary key value for User
+    UserExp.associate = (models) => {
+        UserExp.belongsTo(models.User, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
+
+    return UserExp;
 };

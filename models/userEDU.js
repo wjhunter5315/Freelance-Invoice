@@ -5,13 +5,14 @@ module.exports = function(sequelize, DataTypes) {
         degree: DataTypes.STRING,
         field: DataTypes.STRING,
     });
-
+    //Education is associated with ("Belongs To") User
+    // will add userId to UserEDU to hold the primary key value for User
     UserEDU.associate = (models) => {
         UserEDU.belongsTo(models.User, {
-            foreihnKey: {
+            foreignKey: {
                 allowNull: false
             }
         });
     };
     return UserEDU;
-    };
+};

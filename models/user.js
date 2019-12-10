@@ -10,12 +10,13 @@ module.exports = function(sequelize, DataTypes) {
         username: DataTypes.STRING,
         password: DataTypes.STRING
     });
-
+    //User owns ("has") Services
+    // this will add userId to Services
     User.associate = (models) => {
         User.hasMany(models.Services, {
             onDelete: "cascade"
         });
     };
     return User;
-    };
+};
     

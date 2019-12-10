@@ -26,3 +26,10 @@ $("#continue-button").on("click", function () {
     })
   }
 });
+
+$("#getStarted").on("click", function() {
+  goSignup();
+});
+function goSignup() {
+    window.location.href = "../../create-profile"
+}

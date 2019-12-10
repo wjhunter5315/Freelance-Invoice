@@ -1,33 +1,85 @@
 //NAV BAR ON-CLICK FUNCTIONS
+$(document).ready(function() {
+    function getName () {
+        $.get("/api/User", function(data) {
+            let fullName = [];
+            console.log(data);
+            console.log(data[0].firstName);
+            fullName = `${data[0].firstName} ${data[0].lastName}`
+            console.log(fullName);
+            // $("#full-name-profile").val(fullName);
+            $("#full-name-profile").append(fullName);
+        });
+    }
+    getName();
+
+    function getEducation () {
+        $.get("/api/UserEDU", function(data) {
+            let schoolName = data[0].school;
+            let degreeGot = data[0].degree;
+            let fieldDeg = data[0].field;
+            console.log(schoolName, degreeGot, fieldDeg);
+            $("#school-info").append(schoolName);
+            $("#degree-info").append(degreeGot);
+            $("#field-info").append(fieldDeg);
+        });
+    }
+    getEducation();
+
+    function getExperience () {
+        $.get("/api/UserExp", function(data) {
+            let expTitle = data[0].title;
+            let expCompany = data[0].company;
+            let expDescription = data[0].description;
+            console.log(expTitle, expCompany, expDescription);
+            $("#company-info").append(expCompany);
+            $("#title-info").append(expTitle);
+            $("#description-info").append(expDescription);
+        });
+    }
+    getExperience();
+})
 
 //Home nav button
-
 $("#home-button-nav").on("click", function() {
     console.log("Button is working.");
+    goHome();
 });
+function goHome() {
+    window.location.href = "../../"
+}
 
 //Profile nav button
-
 $("#profile-button-nav").on("click", function() {
     console.log("Button is working.");
+    goProfile();
 });
+function goProfile() {
+    window.location.href = "../../profile"
+}
 
 //Invoices nav button
-
 $("#invoices-button-nav").on("click", function() {
     console.log("Button is working.");
+    goInvoices();
 });
+function goInvoices() {
+    window.location.href = "../../invoice"
+}
 
 //Sign-up nav button
-
 $("#signup-button").on("click", function() {
     console.log("Button is working.");
+    goSignup();
 });
+function goSignup() {
+    window.location.href = "../../create-profile"
+}
 
 //Log-in nav button
-
 $("#login-button").on("click", function() {
     console.log("Button is working.");
+    goHome();
 });
 
 //--------------------------------------------------------//

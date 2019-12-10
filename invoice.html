@@ -83,20 +83,40 @@
               Invoice #
               
               <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
-                  001
+                <div class="control">
+                  <input
+                    id="invoice-number"
+                    class="input is-hovered"
+                    type="text"
+                    placeholder="No."
+                  />
+                </div>
               </p>
             </div>
             <div class="column" style="font-weight: 700;">
               Description
               
               <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
-                  Your item name
+                <div class="control">
+                  <input
+                    id="invoice-description"
+                    class="input is-hovered"
+                    type="text"
+                    placeholder="add details"
+                  />
+                </div>
               </p>
             </div>
             <div class="column" style="font-weight: 700;">
               Rate
               <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
-                  Your Rate
+                <div class="control">
+                  <input
+                    id="invoice-rate"
+                    class="input is-hovered"
+                    type="text"
+                  />
+                </div>
                 </p>
             </div>
             <div class="column" style="font-weight: 700;">
@@ -116,6 +136,9 @@
                 </p>
             </div>
           </div>
+          <button id="make-invoice" class="button is-large" style="background-color: forestgreen; color: white;">
+            Submit
+          </button>
           <hr>
           <div id="subtotal">
             Subtotal

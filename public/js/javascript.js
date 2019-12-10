@@ -73,4 +73,4 @@ $("#continue-button").on("click", function() {
   }).catch((err) => {
     if (err) throw err;
   })
-  });
+});

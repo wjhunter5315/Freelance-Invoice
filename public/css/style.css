@@ -97,4 +97,26 @@ hr {
 .invoice-container {
     margin: 20px auto;
     width: 90%;
+    display: none;
+}
+
+.make-payment {
+    float: left;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+#new-invoice {
+    width:700px;
+    margin: 30px auto;
+
+}
+
+.fa-plus-square {
+    display: block;
+    float: left;
+}
+
+.hero-body {
+    background-color: rgb(179, 179, 179);
 }

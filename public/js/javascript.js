@@ -1,5 +1,5 @@
 $("#continue-button").on("click", function () {
-  var user = {
+  var User = {
     firstName: $("#first-name-input").val(),
     lastName: $("#last-name-input").val(),
     username: $("#user-name-input").val(),
@@ -11,7 +11,7 @@ $("#continue-button").on("click", function () {
     confirm: $("#password-confirm").val()
   }
 
-  if (user.password !== user.confirm) {
+  if (User.password !== User.confirm) {
     alert("Password does not match.");
     $("#password-input").val("");
     $("#password-confirm").val("");
@@ -19,8 +19,8 @@ $("#continue-button").on("click", function () {
   else {
     $.ajax({
       method: "POST",
-      url: "/api/user",
-      data: user
+      url: "/api/User",
+      data: User
     }).catch((err)=>{
       if (err) throw err;
     })

@@ -5,13 +5,13 @@ let Services = sequelize.define("Services", {
     rate: DataTypes.INTEGER
 });
 
-// Services.associate = function(models) {
-//     Services.belongsTo(models.Invoices, {
-//         foreignKey: {
-//             allowNull: false,
-//         },
-//     }
-//     )};
+Services.associate = function(models) {
+    Services.belongsTo(models.Invoices, {
+        foreignKey: {
+            allowNull: false,
+        },
+    }
+    )};
 
 return Services;
 };

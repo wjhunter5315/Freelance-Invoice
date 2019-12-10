@@ -28,6 +28,10 @@
         <h2>Enter your most recent work experience.</h2>
         <br>
         <!-- upload button -->
+        <form action="/uploadfile" enctype="multipart/form-data" method="POST"> 
+          <input type="file" name="myFile" />
+          <!-- <input type="submit" value="Upload a file"/> -->
+       </form>
         <button id="upload-button" class="button is-medium">Upload Resume</button>
         <br><br>
         <img src="./assets/img/or.jpg" width="100%" alt="">

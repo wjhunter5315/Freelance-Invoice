@@ -1,4 +1,5 @@
-$("#continue-button").on("click", function() {
+$("#continue-button").on("click", function(event) {
+event.preventDefault();
 
 var UserEdu = {
     school: $("#school-input").val(),
@@ -10,7 +11,8 @@ $.ajax({
     method: "POST",
     url: "/api/UserEdu",
     data: UserEdu
-  }).catch((err) => {
+  }).then((result) => console.log(result))
+  .catch((err) => {
     if (err) throw err;
   })
 

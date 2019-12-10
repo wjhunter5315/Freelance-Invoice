@@ -11,7 +11,7 @@ UserExp.associate = function(models) {
             allowNull: false,
         }
     }
-    )};
+)};
 
 return UserExp;
 };

@@ -1,4 +1,6 @@
-$("#continue-button").on("click", function () {
+$("#continue-button").on("click", function (event) {
+event.preventDefault();
+
   var User = {
     firstName: $("#first-name-input").val(),
     lastName: $("#last-name-input").val(),

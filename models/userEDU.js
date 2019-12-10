@@ -7,11 +7,9 @@ module.exports = function(sequelize, DataTypes) {
 
 UserEdu.associate = function(models) {
     UserEdu.belongsTo(models.User, {
-        foreignKey: {
-            allowNull: false,
-        }
+        foreignKey: 'hello'
     }
-    )};
+)};
 
 return UserEdu;
 };

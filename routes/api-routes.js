@@ -38,7 +38,7 @@ module.exports = (app => {
             city: req.body.city,
             state: req.body.state,
             userEmail: req.body.userEmail,
-            userPhone: req.body.hone,
+            userPhone: req.body.userPhone,
             username: req.body.username,
             password: req.body.password
         }).then(dbUser => {

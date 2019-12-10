@@ -8,7 +8,13 @@ module.exports = function(sequelize, DataTypes) {
         userEmail: DataTypes.STRING,
         userPhone: DataTypes.STRING,
         username: DataTypes.STRING,
-        password: DataTypes.STRING
+        password: DataTypes.STRING,
+        title: DataTypes.STRING,
+        company: DataTypes.STRING,
+        description: DataTypes.STRING,
+        school: DataTypes.STRING,
+        degree: DataTypes.STRING,
+        field: DataTypes.STRING,
     });
 
     User.associate = function(models) {

@@ -14,7 +14,7 @@
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
   </head>
   <body>
     <!-- progression bar -->
@@ -24,14 +24,14 @@
     <!-- <form action="/api/user" method="post" class="form-example"> -->
     <div class="big-container">
       <!-- logo -->
-      <img src="./assets/img/logo.png" width="150" alt="" id="logo" />
+      <img src="./public/assets/img/logo.png" width="150" alt="" id="logo" />
       <br />
       <b class="header">Welcome to FeeLancer</b>
       <br />
       <h2>Please complete the info below to create a profile</h2>
 
       <hr />
-
+      <div class="container" id="general-info-container">
       <!-- first name section -->
       <div class="control">
         <p>First Name</p>
@@ -43,7 +43,6 @@
           name="firstName"
         />
       </div>
-
       <br />
 
       <!-- last name section -->
@@ -56,7 +55,6 @@
           placeholder="Hovered input"
         />
       </div>
-
       <br />
 
       <!-- city section -->
@@ -69,7 +67,6 @@
           placeholder="Hovered input"
         />
       </div>
-
       <br />
 
       <!-- state section -->
@@ -82,7 +79,6 @@
           placeholder="Hovered input"
         />
       </div>
-
       <br />
 
       <!-- email section -->
@@ -95,7 +91,6 @@
           placeholder="Hovered input"
         />
       </div>
-
       <br />
 
       <!-- email section -->
@@ -108,7 +103,6 @@
           placeholder="Hovered input"
         />
       </div>
-
       <br />
 
       <!-- username section -->
@@ -121,7 +115,6 @@
           placeholder="Hovered input"
         />
       </div>
-
       <br />
 
       <!-- password section -->
@@ -139,7 +132,6 @@
           </span>
         </p>
       </div>
-
       <br />
 
       <!-- confirm password section -->
@@ -157,13 +149,111 @@
           </span>
         </p>
       </div>
+      </div>
+       
+      <div class="container" id="education-info-container">
+      <b class="header">Education</b>
+      <br />
+      <h2>Enter your highest level of education</h2>
+      <br>
+
+      <!-- job title section -->
+      <div class="control">
+        <p>School</p>
+        <input
+          id="school-input"
+          class="input is-hovered"
+          type="text"
+          placeholder=""
+        />
+      </div>
+      <br />
+
+      <!-- company section -->
+      <p>Degree / Certificate</p>
+      <div class="control">
+        <input
+          id="degree-input"
+          class="input is-hovered"
+          type="text"
+          placeholder=""
+        />
+      </div>
 
       <br />
 
+      <!-- job description section -->
+      <p>Field of Study</p>
+      <div class="control">
+        <input
+          id="field-input"
+          class="input is-hovered"
+          type="text"
+          placeholder=""
+        />
+      </div>
+      </div>
+      
+      <div class="container" id="experience-info-container">
+      <b class="header">Experience</b>
+      <br />
+      <h2>Enter your most recent work experience.</h2>
+      <br>
+      <!-- upload button -->
+      <form action="/uploadfile" enctype="multipart/form-data" method="POST">
+        <input type="file" name="myFile" />
+        <input type="submit" value="Upload a file"/>
+      </form>
+      <button id="upload-button" class="button is-medium">Upload Resume</button>
+      <br><br>
+      <img src="./public/assets/img/or.jpg" width="100%" alt="">
+       
+
+      <!-- job title section -->
+      <div class="control">
+        <p>Title</p>
+        <input
+          id="title-input"
+          class="input is-hovered"
+          type="text"
+          placeholder=""
+        />
+      </div>
+
+      <br />
+
+      <!-- company section -->
+      <p>Company</p>
+      <div class="control">
+        <input
+          id="company-input"
+          class="input is-hovered"
+          type="text"
+          placeholder=""
+        />
+      </div>
+
+      <br />
+
+      <!-- job description section -->
+      <p>Job Description</p>
+      <div class="control">
+        <input
+          id="job-description-input"
+          class="input is-hovered"
+          type="text"
+          placeholder=""
+        />
+      </div>
+     </div>
+      <br />
+
       <!-- button to continue -->
-      <a href="/experience"><button id="continue-button" class="button is-medium">Create Profile</button></a>
+      <button id="continue-button-one" class="button is-medium">Next</button>
+      <button id="continue-button-two" class="button is-medium">Next</button>
+      <button id="create-profile-button" class="button is-medium">Create Profile</button>
     </div>
   <!-- </form> -->
-    <script type="text/javascript" src="./js/javascript.js"></script>
+    <script type="text/javascript" src="./public/js/create-profile.js"></script>
   </body>
 </html>

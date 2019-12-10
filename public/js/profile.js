@@ -54,7 +54,7 @@ $(document).ready(function() {
 //     }
 //     getExperience();
 // })
-
+});
 //Home nav button
 $("#home-button-nav").on("click", function() {
     console.log("Button is working.");

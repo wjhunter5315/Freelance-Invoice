@@ -3,19 +3,17 @@ $("#upload-button").on("click", function() {
 });
 
 $("#continue-button").on("click", function() {
+  var userExp = {
+      title: $("#title-input").val(),
+      company: $("#company-input").val(),
+      description: $("#job-description-input").val()
+  }
 
-    var user = {
-        title: "",
-        company: "",
-        description: ""
-    }
-    
-    user.title = $("#title-input").val();
-    user.company = $("#company-input").val();
-    user.description = $("#job-description-input").val();
-  
-    console.log(user.title);
-    console.log(user.company);
-    console.log(user.description);
-    
-});
+  $.ajax({
+    method: "POST",
+    url: "/api/userExp",
+    data: userExp
+  }).catch((err) => {
+    if (err) throw err;
+  })
+  });

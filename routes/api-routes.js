@@ -6,11 +6,7 @@ module.exports = (app => {
         res.json(dbUser);
         });
     });
-<<<<<<< HEAD
-
-=======
     
->>>>>>> b750bb44f2282681db4084f31277124afb1fb12a
     app.get("/api/invoices", (req, res) => {
         db.Invoices.findAll({}).then(dbInvoices => {
             res.json(dbInvoices);
@@ -25,11 +21,7 @@ module.exports = (app => {
             state: req.body.state,
             userEmail: req.body.userEmail,
             userPhone: req.body.userPhone,
-<<<<<<< HEAD
-            username: req.body.username,
-=======
             username: req.body.username,
->>>>>>> b750bb44f2282681db4084f31277124afb1fb12a
             password: req.body.password,
             school: req.body.school,
             degree: req.body.degree,

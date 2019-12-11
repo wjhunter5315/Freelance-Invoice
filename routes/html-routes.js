@@ -7,13 +7,13 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../index.html"));
   });
 
-  app.get("/education", function(req, res) {
-    res.sendFile(path.join(__dirname, "../education.html"));
-  });
+  // app.get("/education", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../education.html"));
+  // });
 
-  app.get("/experience", function(req, res) {
-    res.sendFile(path.join(__dirname, "../experience.html"));
-  });
+  // app.get("/experience", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../experience.html"));
+  // });
 
   app.get("/profile", function(req, res) {
     res.sendFile(path.join(__dirname, "../profile.html"));

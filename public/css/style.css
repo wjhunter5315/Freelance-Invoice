@@ -97,7 +97,7 @@ hr {
 .invoice-container {
     margin: 20px auto;
     width: 90%;
-    display: none;
+    /* display: none; */
 }
 
 .make-payment {

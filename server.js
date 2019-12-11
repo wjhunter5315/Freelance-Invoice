@@ -1,8 +1,6 @@
 var express = require("express");
-
 var app = express();
 var PORT = process.env.PORT || 8000;
-
 var db = require("./models");
 
 app.use(express.urlencoded({ extended: true }));
@@ -12,8 +10,9 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // api & html routes
-require("./routes/api-routes.js")(app);
+// require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
+require("./public/js/multer")(app);
 
 // server listening
 db.sequelize.sync({ force: true }).then(function() {

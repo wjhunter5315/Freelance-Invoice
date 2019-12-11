@@ -23,9 +23,9 @@ var User = {
 $("#continue-button-one").on("click", function () {
 
   User.password = $("#password-input").val();
-  User.confirm = $("#password-confirm").val();
+  let confirm = $("#password-confirm").val();
 
-  if (User.password !== User.confirm) {
+  if (User.password !== confirm) {
     alert("Password does not match.");
     $("#password-input").val("");
     $("#password-confirm").val("");

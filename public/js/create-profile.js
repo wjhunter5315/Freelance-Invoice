@@ -22,13 +22,6 @@ var User = {
 
 $("#continue-button-one").on("click", function () {
 
-  User.firstName = $("#first-name-input").val();
-  User.lastName = $("#last-name-input").val();
-  User.username = $("#user-name-input").val();
-  User.city = $("#city-input").val();
-  User.state = $("#state-input").val();
-  User.userEmail = $("#email-input").val();
-  User.userPhone = $("#phone-input").val();
   User.password = $("#password-input").val();
   User.confirm = $("#password-confirm").val();
 
@@ -36,12 +29,26 @@ $("#continue-button-one").on("click", function () {
     alert("Password does not match.");
     $("#password-input").val("");
     $("#password-confirm").val("");
+    User.password = "";
+    User.confirm = "";
   }
+
+  else {
+
+  User.firstName = $("#first-name-input").val();
+  User.lastName = $("#last-name-input").val();
+  User.username = $("#user-name-input").val();
+  User.city = $("#city-input").val();
+  User.state = $("#state-input").val();
+  User.userEmail = $("#email-input").val();
+  User.userPhone = $("#phone-input").val();
 
   $("#general-info-container").hide();
   $("#continue-button-one").hide();
   $("#continue-button-two").show();
   $("#education-info-container").show();
+  }
+
 });
 
 $("#continue-button-two").on("click", function () {

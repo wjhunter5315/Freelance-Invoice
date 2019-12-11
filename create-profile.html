@@ -39,7 +39,7 @@
           id="first-name-input"
           class="input is-hovered"
           type="text"
-          placeholder="Hovered input"
+          placeholder=""
           name="firstName"
         />
       </div>
@@ -52,7 +52,7 @@
           id="last-name-input"
           class="input is-hovered"
           type="text"
-          placeholder="Hovered input"
+          placeholder=""
         />
       </div>
       <br />
@@ -64,7 +64,7 @@
           id="city-input"
           class="input is-hovered"
           type="text"
-          placeholder="Hovered input"
+          placeholder=""
         />
       </div>
       <br />
@@ -76,7 +76,7 @@
           id="state-input"
           class="input is-hovered"
           type="text"
-          placeholder="Hovered input"
+          placeholder=""
         />
       </div>
       <br />
@@ -88,7 +88,7 @@
           id="email-input"
           class="input is-hovered"
           type="text"
-          placeholder="Hovered input"
+          placeholder=""
         />
       </div>
       <br />
@@ -100,7 +100,7 @@
           id="phone-input"
           class="input is-hovered"
           type="text"
-          placeholder="Hovered input"
+          placeholder=""
         />
       </div>
       <br />
@@ -112,7 +112,7 @@
           id="user-name-input"
           class="input is-hovered"
           type="text"
-          placeholder="Hovered input"
+          placeholder=""
         />
       </div>
       <br />
@@ -201,10 +201,10 @@
       <br>
       <!-- upload button -->
       <form action="/uploadfile" enctype="multipart/form-data" method="POST">
-        <input type="file" name="myFile" />
-        <input type="submit" value="Upload a file"/>
+        <input type="file" name="myFile" style="width: 100%; background-color: lightgray; padding: 15px; margin: 20px auto; border-radius: 3px; border: none;" value="Select a file"/>
+        
+        <button id="upload-button" class="button is-medium" type="submit" value="Upload a file">Upload Resume</button>
       </form>
-      <button id="upload-button" class="button is-medium">Upload Resume</button>
       <br><br>
       <img src="./assets/img/or.jpg" width="100%" alt="">
        
@@ -249,11 +249,12 @@
       <br />
 
       <!-- button to continue -->
-      <button id="continue-button-one" class="button is-medium">Next</button>
-      <button id="continue-button-two" class="button is-medium">Next</button>
-      <a href="/profile"><button id="create-profile-button" class="button is-medium">Create Profile</button></a>
+      <button id="continue-button-one" class="button is-medium" style="margin-bottom: 20px;">Next</button>
+      <button id="continue-button-two" class="button is-medium" style="margin-bottom: 20px;">Next</button>
+      <a href="/profile"><button id="create-profile-button" class="button is-medium" style="margin-bottom: 20px;">Create Profile</button></a>
     </div>
   <!-- </form> -->
     <script type="text/javascript" src="./js/create-profile.js"></script>
+    <script type="text/javascript" src="./js/multer.js"></script>
   </body>
 </html>

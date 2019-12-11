@@ -46,13 +46,18 @@ module.exports = (app => {
         });
     });
 
-    // app.post("/api/invoices", (req, res) => {
-    //     db.Invoices.create({
-    //         client: req.body.client
-    //     }).then(dbInvoices => {
-    //         res.json(dbInvoices);
-    //     });
-    // });
+    app.post("/api/invoices", (req, res) => {
+        db.Invoices.create({
+            number: req.body.number,
+            company: req.body.company,
+            description: req.body.description,
+            rate: req.body.rate,
+            hours: req.body.hours,
+            tax: req.body.tax
+        }).then(dbInvoices => {
+            res.json(dbInvoices);
+        });
+    });
 
     // app.put("/api/User", (req, res) => {
     //     db.User.update({

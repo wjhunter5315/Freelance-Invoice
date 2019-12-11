@@ -67,12 +67,13 @@ $("#create-profile-button").on("click", function () {
   }).catch((err)=>{
     if (err) throw err;
   });
+  
 });
+$("#getStarted").on("click", function() {
+  goSignup();
+});
+function goSignup() {
+    window.location.href = "../../create-profile"
+}
 
-// $("#getStarted").on("click", function() {
-//   goSignup();
-// });
-// function goSignup() {
-//     window.location.href = "../../create-profile"
-// }
-//
+

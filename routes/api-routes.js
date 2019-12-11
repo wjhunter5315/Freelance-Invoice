@@ -6,12 +6,6 @@ module.exports = (app => {
         res.json(dbUser);
         });
     });
-
-    app.get("/api/services", (req, res) => {
-        db.Services.findAll({}).then(dbServices => {
-            res.json(dbServices);
-        });
-    });
     
     app.get("/api/invoices", (req, res) => {
         db.Invoices.findAll({}).then(dbInvoices => {
@@ -35,19 +29,22 @@ module.exports = (app => {
             title: req.body.title,
             company: req.body.company,
             description: req.body.description
-        }).then(dbUser => {
-            res.json(dbUser);
+        }).then(user => {
+            res.json(user);
         });
     });
 
-    // app.post("/api/services", (req, res) => {
-    //     db.Services.create({
-    //         labor: req.body.labor,
-    //         rate: req.body.rate
-    //     }).then(dbServices => {
-    //         res.json(dbServices);
-    //     });
-    // });
+    app.get("/api/User/:id", (req, res) => {
+        db.User.findOne({
+            where: {
+                id: req.params.id
+            }
+        }).then(result => {
+            var user = result
+            console.log(result)
+            res.render("index", { index: [user] });
+        });
+    });
 
     // app.post("/api/invoices", (req, res) => {
     //     db.Invoices.create({
@@ -82,19 +79,6 @@ module.exports = (app => {
     //     });
     // });
 
-    // app.put("/api/services", (req, res) => {
-    //     db.Services.update({
-    //         labor: req.body.labor,
-    //         rate: req.body.rate
-    //     }, {
-    //         where: {
-    //             id: req.body.id
-    //         }
-    //     }).then(dbServices => {
-    //         res.json(dbServices);
-    //     });
-    // });
-
     // app.put("/api/invoices", (req, res) => {
     //     db.Invoices.update({
     //         client: req.body.client
@@ -114,16 +98,6 @@ module.exports = (app => {
 //             }
 //         }).then(dbUser => {
 //             res.json(dbUser);
-//         });
-//     });
-
-//     app.delete("/api/servives/:id", (req, res) => {
-//         db.Services.destroy({
-//             where: {
-//                 id: req.params.id
-//             }
-//         }).then(dbServices => {
-//             res.json(dbServices);
 //         });
 //     });
 

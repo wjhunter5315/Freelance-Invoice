@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Home</title>
+    <title>FeeLancer Profile</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
@@ -16,12 +16,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
     <!-- navbar -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand is-transparent">
         <img
-          src="./assets/img/logo.png"
+          src="assets/img/logo.png"
           width="50"
           style="margin: 10px 40px;"
         />
@@ -41,45 +40,60 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item">
+          <a
+            id="home-button-nav"
+            class="navbar-item">
             Home
           </a>
 
-          <a class="navbar-item">
+          <a
+            id="profile-button-nav"
+            class="navbar-item">
             Profile
           </a>
-          <a class="navbar-item">
+          <a
+            id="invoices-button-nav"
+            class="navbar-item">
             Invoices
           </a>
         </div>
 
         <div class="navbar-end">
           <div class="navbar-item">
+            <div class="buttons">
+              <a
+                id="signup-button"
+                class="button is-primary"
+                style="background-color: forestgreen;"
+              >
+                <strong>Sign up</strong>
+              </a>
+              <a
+                id="login-button"
+                class="button is-light">
+                Log in
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </nav>
 
-<!-- hero full size width container -->
-<section class="hero is-success is-fullheight">
-        <div class="hero-body">
-          <div class="container">
-              <img src="./assets/img/logo.png" alt="" style="width: 150px; margin: 0 auto; display: block;">
+  {{{body}}}
     
-            <br>
-            <h2 class="subtitle">
-              Start putting money in your pocket today
-            </h2>
-            <hr style="width: 400px; opacity: .3; display: block; margin: 20px auto;">
-            <h2 class="subtitle" style="font-size: medium;">
-                    Click here to get started
-                  </h2>
-                  <a href="/create-profile"><button id="getStarted" class="button" style="color: white; background-color: greenyellow; display: block; margin: 0 auto; border: hidden; width: 200px;">Get Started</button></a>
-          </div>
-        </div>
-      </section>
+          <hr>
+      <div class="button-container">
+        <button
+          id="contactme-button"
+          class="button is-large"
+          style="background-color: forestgreen; color: white;"
+        >
+          Contact Me
+        </button>
 
-
-    <script type="text/javascript" src="/js/create-profile.js"></script>
-  </body>
+        <i id="facebook-button" class="fab fa-facebook-square fa-3x"></i
+        ><i id="instagram-button" class="fab fa-instagram fa-3x"></i
+        ><i id="github-button" class="fab fa-github-alt fa-3x"></i>
+      </div>
+    <script type="text/javascript" src="./js/profile.js"></script>
 </html>

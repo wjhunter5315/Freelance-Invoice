@@ -1,0 +1,200 @@
+<style>
+  .big-container {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+.progress {
+    display: block;
+    width: 95%;
+    margin: 20px auto;
+}
+
+.header {
+    display: block;
+    font-size: 24px;
+    text-align: center;
+}
+
+#logo {
+    display: block;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+#continue-button {
+    margin-bottom: 50px;
+    background-color: forestgreen;
+    color: white;
+    border: hidden;
+}
+
+#upload-button {
+    width: 100%;
+    background-color: forestgreen;
+    color: white;
+}
+
+.profile-container {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#about-me, #about-header {
+    width: 30%;
+}
+
+.card {
+    float: right !important;
+    width: 50%;
+    margin: 1%;
+}
+
+.left {
+    float: left;
+}
+
+hr {
+    clear: both;
+}
+
+#job-title {
+    width: 125px;
+    margin-bottom: 30px;
+    background-color: yellowgreen;
+    padding: 5px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+}
+
+.button-container {
+    margin: 0 auto;
+    width: 80%;
+    /* position: fixed; */
+}
+.is-large {
+    float: right;
+    width: 200px;
+    margin-left: 20px;
+    border: hidden;
+}
+
+.fa-3x {
+    display: block;
+    margin: 10px;
+    float: right;
+}
+
+#about-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.invoice-container {
+    margin: 20px auto;
+    width: 90%;
+    display: none;
+}
+
+.make-payment {
+    float: left;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+#new-invoice {
+    width:700px;
+    margin: 30px auto;
+
+}
+
+.fa-plus-square {
+    display: block;
+    float: left;
+}
+
+.hero-body {
+    background-color: rgb(179, 179, 179);
+}
+</style>
+
+{{#each index}}
+    <!-- container holding all info elements -->
+    <div class="profile-container">
+      <!-- image with name under -->
+      <div class="left">
+        <img
+          src="https://via.placeholder.com/300x400.png"
+          style="border-radius: 3px;"
+          alt=""
+        />
+        <br /><br />
+        <h1 id="full-name-profile" style="font-size: 36px;" placeholder="First, Last">{{firstName}} {{lastName}}</h1>
+        <h5 id="job-title" placeholder="Job Title">{{title}}</h5>
+        
+    </div>
+
+      <!-- experience card -->
+      <div class="card">
+        <div class="card-content">
+          <p class="title">
+            Experience
+          </p>
+          <hr />
+          <p
+            id="company-info"
+            class="subtitle">
+            Company: {{company}}
+          </p>
+          <p
+            id="title-info"
+            class="subtitle">
+            Title: {{title}}
+          </p>
+          <p
+            id="description-info"
+            class="subtitle">
+            Description: {{description}}
+          </p>
+        </div>
+      </div>
+
+      <!-- education card -->
+      <div class="card">
+        <div class="card-content">
+          <p class="title">
+            Education
+          </p>
+          <hr />
+          <p
+            id="school-info"
+            class="subtitle">
+            School: {{school}}
+          </p>
+          <p
+            id="degree-info"
+            class="subtitle">
+            Degree: {{degree}}
+          </p>
+          <p
+            id="field-info"
+            class="subtitle">
+            Field of Study: {{field}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- about me -->
+    <div id="about-container">
+      <h1 style="font-size: 24px;" id="about-header">About Me</h1>
+      <p id="about-me">
+        {{description}}
+      </p>
+    </div>
+{{/each}}
+

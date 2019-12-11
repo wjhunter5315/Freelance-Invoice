@@ -9,9 +9,6 @@ Invoices.associate = function(models) {
             allowNull: false,
         }
     });
-    Invoices.hasMany(models.Services, {
-        onDelete: "cascade",
-    });
 };
 return Invoices;
 };

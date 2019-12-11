@@ -7,13 +7,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../index.html"));
   });
 
-  // app.get("/education", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../education.html"));
-  // });
-
-  // app.get("/experience", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../experience.html"));
-  // });
+  app.get("/create-profile", function(req, res) {
+    res.sendFile(path.join(__dirname, "../create-profile.html"));
+  });
 
   app.get("/profile", function(req, res) {
     res.sendFile(path.join(__dirname, "../profile.html"));
@@ -23,9 +19,6 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../invoice.html"));
   });
 
-  app.get("/create-profile", function(req, res) {
-    res.sendFile(path.join(__dirname, "../create-profile.html"));
-  });
   // app.get("/profile/:id", function(req, res) {
   //   db.query.findAll({
   //     where: req.params.id

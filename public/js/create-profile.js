@@ -59,20 +59,15 @@ $("#create-profile-button").on("click", function () {
   User.title = $("#title-input").val();
   User.company = $("#company-input").val();
   User.description = $("#job-description-input").val();
-  console.log(User);
+  
+  $.ajax({
+    method: "POST",
+    url: "/api/User",
+    data: User
+  }).catch((err)=>{
+    if (err) throw err;
+  });
 });
-
-
-//   else {
-//     $.ajax({
-//       method: "POST",
-//       url: "/api/User",
-//       data: User
-//     }).catch((err)=>{
-//       if (err) throw err;
-//     })
-//   }
-// });
 
 // $("#getStarted").on("click", function() {
 //   goSignup();

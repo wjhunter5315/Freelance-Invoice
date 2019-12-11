@@ -60,17 +60,28 @@ $("#create-profile-button").on("click", function () {
   User.company = $("#company-input").val();
   User.description = $("#job-description-input").val();
   console.log(User);
+  $.ajax({
+    method: "POST",
+    url: "/api/User",
+    data: User
+  }).catch((err)=>{
+    if (err) throw err;
+  });
+  function goToProfile() {
+    window.location.href = "../../profile"
+  };
+  goToProfile();
 });
 
 
 //   else {
-//     $.ajax({
-//       method: "POST",
-//       url: "/api/User",
-//       data: User
-//     }).catch((err)=>{
-//       if (err) throw err;
-//     })
+    // $.ajax({
+    //   method: "POST",
+    //   url: "/api/User",
+    //   data: User
+    // }).catch((err)=>{
+    //   if (err) throw err;
+    // })
 //   }
 // });
 

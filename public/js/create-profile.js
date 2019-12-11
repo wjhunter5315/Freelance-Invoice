@@ -59,7 +59,7 @@ $("#create-profile-button").on("click", function () {
   User.title = $("#title-input").val();
   User.company = $("#company-input").val();
   User.description = $("#job-description-input").val();
-  console.log(User);
+  
   $.ajax({
     method: "POST",
     url: "/api/User",
@@ -67,23 +67,7 @@ $("#create-profile-button").on("click", function () {
   }).catch((err)=>{
     if (err) throw err;
   });
-  function goToProfile() {
-    window.location.href = "../../profile"
-  };
-  goToProfile();
 });
-
-
-//   else {
-    // $.ajax({
-    //   method: "POST",
-    //   url: "/api/User",
-    //   data: User
-    // }).catch((err)=>{
-    //   if (err) throw err;
-    // })
-//   }
-// });
 
 // $("#getStarted").on("click", function() {
 //   goSignup();

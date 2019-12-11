@@ -6,7 +6,11 @@ module.exports = (app => {
         res.json(dbUser);
         });
     });
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> b750bb44f2282681db4084f31277124afb1fb12a
     app.get("/api/invoices", (req, res) => {
         db.Invoices.findAll({}).then(dbInvoices => {
             res.json(dbInvoices);
@@ -21,7 +25,11 @@ module.exports = (app => {
             state: req.body.state,
             userEmail: req.body.userEmail,
             userPhone: req.body.userPhone,
+<<<<<<< HEAD
             username: req.body.username,
+=======
+            username: req.body.username,
+>>>>>>> b750bb44f2282681db4084f31277124afb1fb12a
             password: req.body.password,
             school: req.body.school,
             degree: req.body.degree,
@@ -29,7 +37,7 @@ module.exports = (app => {
             title: req.body.title,
             company: req.body.company,
             description: req.body.description
-        }).then(user => {
+        }).then(user => {
             res.json(user);
         });
     });
@@ -46,27 +54,23 @@ module.exports = (app => {
         });
     });
 
-    app.post("/api/invoices", (req, res) => {
-        db.Invoices.create({
-            number: req.body.number,
-            company: req.body.company,
-            description: req.body.description,
-            rate: req.body.rate,
-            hours: req.body.hours,
-            tax: req.body.tax,
-        }).then(dbInvoices => {
-            res.json(dbInvoices);
-        });
-    });
+    // app.post("/api/invoices", (req, res) => {
+    //     db.Invoices.create({
+    //         client: req.body.client
+    //     }).then(dbInvoices => {
+    //         res.json(dbInvoices);
+    //     });
+    // });
+
     // app.put("/api/User", (req, res) => {
     //     db.User.update({
-    //         firstName: req.body.name,
-    //         lastName: req.body.lastName,
+    //         firstName: req.body.name,
+    //         lastName: req.body.lastName,
     //         city: req.body.city,
     //         state: req.body.state,
-    //         userEmail: req.body.email,
+    //         userEmail: req.body.email,
     //         userPhone: req.body.email,
-    //         username: req.body.userName,
+    //         username: req.body.userName,
     //         password: req.body.password,
     //         school: req.body.school,
     //         degree: req.body.degree,
@@ -93,15 +97,17 @@ module.exports = (app => {
     //         res.json(dbInvoices);
     //     });
     // });
-//     app.delete("/api/user/:id", (req, res) => {
+
+//     app.delete("/api/user/:id", (req, res) => {
 //         db.User.destroy({
-//             where: {
-//                 id: req.params.id
+//             where: {
+//                 id: req.params.id
 //             }
-//         }).then(dbUser => {
+//         }).then(dbUser => {
 //             res.json(dbUser);
 //         });
 //     });
+
 //     app.delete("/api/invoices/:id", (req, res) => {
 //         db.Invoices.destroy({
 //             where: {

@@ -14,9 +14,6 @@ module.exports = function(sequelize, DataTypes) {
                 allowNull: true,
             }
     });
-    Invoices.hasMany(models.Services, {
-        onDelete: "cascade",
-    });
 };
 return Invoices;
 };

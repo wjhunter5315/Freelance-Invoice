@@ -1,8 +1,8 @@
-const db = require("../models");
+const db = require("../models");
 
-module.exports = (app => {
-    app.get("/api/User", (req, res) => {
-        db.User.findAll({}).then(dbUser => {
+module.exports = (app => {
+    app.get("/api/User", (req, res) => {
+        db.User.findAll({}).then(dbUser => {
         res.json(dbUser);
         });
     });
@@ -13,13 +13,13 @@ module.exports = (app => {
         });
     });
 
-    app.post("/api/User", (req, res) => {
+    app.post("/api/User", (req, res) => {
         db.User.create({
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
             city: req.body.city,
             state: req.body.state,
-            userEmail: req.body.userEmail,
+            userEmail: req.body.userEmail,
             userPhone: req.body.userPhone,
             username: req.body.username,
             password: req.body.password,
@@ -46,13 +46,18 @@ module.exports = (app => {
         });
     });
 
-    // app.post("/api/invoices", (req, res) => {
-    //     db.Invoices.create({
-    //         client: req.body.client
-    //     }).then(dbInvoices => {
-    //         res.json(dbInvoices);
-    //     });
-    // });
+    app.post("/api/invoices", (req, res) => {
+        db.Invoices.create({
+            number: req.body.number,
+            company: req.body.company,
+            description: req.body.description,
+            rate: req.body.rate,
+            hours: req.body.hours,
+            tax: req.body.tax
+        }).then(dbInvoices => {
+            res.json(dbInvoices);
+        });
+    });
 
     // app.put("/api/User", (req, res) => {
     //     db.User.update({
@@ -78,7 +83,6 @@ module.exports = (app => {
     //         res.json(dbUser);
     //     });
     // });
-
     // app.put("/api/invoices", (req, res) => {
     //     db.Invoices.update({
     //         client: req.body.client

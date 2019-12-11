@@ -61,7 +61,7 @@
       </div>
     </nav>
 <!-- create a new invoice -->
-<div id="new-invoice">
+<!-- <div id="new-invoice">
   <div class="columns">
     <div class="column">
       <h1 style="font-size: 36px;">Create a New Invoice</h1>
@@ -73,7 +73,7 @@
       </div>
   </div>
     <br>
-</div>
+</div> -->
     <!-- container for invoice elements -->
     <div class="invoice-container">
       <h1 style="font-size: 36px;">Invoices</h1>
@@ -81,7 +81,6 @@
       <div class="columns">
           <div class="column" style="font-weight: 700;">
               Invoice #
-              
               <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
                 <div class="control">
                   <input
@@ -94,8 +93,19 @@
               </p>
             </div>
             <div class="column" style="font-weight: 700;">
+              Company
+              <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
+                <div class="control">
+                  <input
+                    id="invoice-company"
+                    class="input is-hovered"
+                    type="text"
+                  />
+                </div>
+                </p>
+            </div>
+            <div class="column" style="font-weight: 700;">
               Description
-              
               <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
                 <div class="control">
                   <input
@@ -124,17 +134,27 @@
               <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
                   <div class="field">
                       <div class="control">
-                        <input class="input is-info" type="text" placeholder="0" style="width: 60px;">
+                        <input id="invoice-hours" class="input is-info" type="text" placeholder="0" style="width: 60px;">
                       </div>
                     </div>
                 </p>
             </div>
             <div class="column" style="font-weight: 700;">
+              Tax %
+              <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
+                  <div class="field">
+                      <div class="control">
+                        <input id="invoice-tax" class="input is-info" type="text" placeholder="0" style="width: 60px;">
+                      </div>
+                    </div>
+                </p>
+            </div>
+            <!-- <div class="column" style="font-weight: 700;">
               Line Total
               <p class="invoice-data" style="margin-top: 20px; font-weight: 300;">
                     line item total
                 </p>
-            </div>
+            </div> -->
           </div>
           <button id="make-invoice" class="button is-large" style="background-color: forestgreen; color: white;">
             Submit
@@ -143,18 +163,22 @@
           <div id="subtotal">
             Subtotal
             <br>
-            <br>
+          </div>
+          <div id="taxes">
             Taxes
+            <br>
+          </div>
+          <div id="amount-due">
+            Amount Due
+            <br>
+            <hr style="width: 150px;">
+            <p class="title" id="amount-due"></p>
           </div>
           <br>
-          Amount Due
-          <br>
-          <hr style="width: 150px;">
-          <p class="title" id="amount-due" >$1000</p>
           <button class="button is-large make-payment" style="background-color: forestgreen; color: white;">Make Payment</button>
     </div>
 
 
-    <script type="text/javascript" src="/js/javascript.js"></script>
+    <script type="text/javascript" src="/js/invoice.js"></script>
   </body>
 </html>
